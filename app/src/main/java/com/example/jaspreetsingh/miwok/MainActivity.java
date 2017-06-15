@@ -13,7 +13,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void numbersActivity(View view)  {
+        //Executed in an Activity, so 'this' is the context
         Intent i = new Intent(this, NumbersActivity.class);
+        //It takes the object 'i' to start new activity
         startActivity(i);
     }
 }
