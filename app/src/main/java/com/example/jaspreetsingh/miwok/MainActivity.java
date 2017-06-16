@@ -1,5 +1,6 @@
 package com.example.jaspreetsingh.miwok;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,6 +29,21 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        //Find the View that show family category
+        TextView family = (TextView) findViewById(R.id.family);
+
+        //Set listener on that View
+        family.setOnClickListener(new View.OnClickListener() {
+            //This code in this method is executed when the family View is clicked on
+            @Override
+            public void onClick(View view) {
+                Intent familyIntent = new Intent(MainActivity.this,FamilyActivity.class);
+                startActivity(familyIntent);
+            }
+
+        });
+
 
     }
 }
