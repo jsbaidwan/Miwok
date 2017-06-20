@@ -31,12 +31,17 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("ten");
 
         LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
-        //Create a TextView called wordView
-        TextView wordView = new TextView(this);
-        //Display the Text on the Screen
-        wordView.setText(words.get(0));
-        //Add the TextView as a child to parent View called rootView using .addView method
-        rootView.addView(wordView);
 
+        int index = 0;
+        while(index < words.size()) {
+            //Create a TextView called wordView
+            TextView wordView = new TextView(this);
+            //Display the Text on the Screen
+            wordView.setText(words.get(index));
+            //Add the TextView as a child to parent View called rootView using .addView method
+            rootView.addView(wordView);
+            //update the counter by index = index +1;
+            index++;
+        }
     }
 }
