@@ -15,7 +15,7 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        //Create a array of words
+        //Create a ArrayList of words
         ArrayList<String> words = new ArrayList<String>();
         words.add("one");
         words.add("two");
@@ -28,6 +28,7 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("nine");
         words.add("ten");
 
+        //Verify the content of the ArrayList words by printing them into the Log
         Log.v("NumbersActivity", "Word at Index 0: " + words.get(0));
         Log.v("NumbersActivity", "Word at Index 1: " + words.get(1));
         Log.v("NumbersActivity", "Word at Index 2: " + words.get(2));
