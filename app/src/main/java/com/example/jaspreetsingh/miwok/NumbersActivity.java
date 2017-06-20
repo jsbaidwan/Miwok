@@ -3,6 +3,8 @@ package com.example.jaspreetsingh.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -28,17 +30,13 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("nine");
         words.add("ten");
 
-        //Verify the content of the ArrayList words by printing them into the Log
-        Log.v("NumbersActivity", "Word at Index 0: " + words.get(0));
-        Log.v("NumbersActivity", "Word at Index 1: " + words.get(1));
-        Log.v("NumbersActivity", "Word at Index 2: " + words.get(2));
-        Log.v("NumbersActivity", "Word at Index 3: " + words.get(3));
-        Log.v("NumbersActivity", "Word at Index 4: " + words.get(4));
-        Log.v("NumbersActivity", "Word at Index 5: " + words.get(5));
-        Log.v("NumbersActivity", "Word at Index 6: " + words.get(6));
-        Log.v("NumbersActivity", "Word at Index 7: " + words.get(7));
-        Log.v("NumbersActivity", "Word at Index 8: " + words.get(8));
-        Log.v("NumbersActivity", "Word at Index 9: " + words.get(9));
+        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
+        //Create a TextView called wordView
+        TextView wordView = new TextView(this);
+        //Display the Text on the Screen
+        wordView.setText(words.get(0));
+        //Add the TextView as a child to parent View called rootView using .addView method
+        rootView.addView(wordView);
 
     }
 }
