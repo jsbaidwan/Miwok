@@ -32,8 +32,8 @@ public class NumbersActivity extends AppCompatActivity {
 
         LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
 
-        int index = 0;
-        while(index < words.size()) {
+
+        for(int index = 0;index < words.size();index++) {
             //Create a TextView called wordView
             TextView wordView = new TextView(this);
             //Display the Text on the Screen
@@ -41,7 +41,7 @@ public class NumbersActivity extends AppCompatActivity {
             //Add the TextView as a child to parent View called rootView using .addView method
             rootView.addView(wordView);
             //update the counter by index = index +1;
-            index++;
+
         }
     }
 }
